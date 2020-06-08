@@ -1,2 +1,2 @@
 # EdiTechStudio
-Creating my own rules 😎
+This repo includes the source code for the site beta.editechstudio.com , Enjoy 😎
