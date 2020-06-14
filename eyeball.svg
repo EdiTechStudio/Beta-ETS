@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="800"
-   height="1000"
+   height="980"
    viewBox="0 0 211.66666 264.5834"
    version="1.1"
    id="svg8">
@@ -293,34 +293,6 @@
          id="circle1005"
          cx="88.159157"
          cy="80.534767" />
-      <text
-         xml:space="preserve"
-         id="text1893"
-         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1895);fill:#000000;fill-opacity:1;stroke:none;" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="74.701347"
-         y="135.16882"
-         id="text1901"><tspan
-           id="tspan1899"
-           x="74.701347"
-           y="135.16882"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">Created by Pritam</tspan><tspan
-           x="74.701347"
-           y="142.22438"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-           id="tspan1903" /></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:'Tlwg Typewriter';-inkscape-font-specification:'Tlwg Typewriter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="47.456215"
-         y="142.71788"
-         id="text1907"><tspan
-           id="tspan1905"
-           x="47.456215"
-           y="142.71788"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:'Tlwg Typewriter';-inkscape-font-specification:'Tlwg Typewriter, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">Powered by EdiTechStudio</tspan></text>
-    </g>
+      </g>
   </g>
 </svg>
