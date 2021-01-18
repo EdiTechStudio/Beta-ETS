@@ -156,6 +156,9 @@ input, textarea {
 }
 #contacts {
     text-align: center;
+.myform {
+    font-family: 'Tangerine', cursive;
+    font-size: 28pt;
 }
 .copyright {
     font-size: 25pt;
