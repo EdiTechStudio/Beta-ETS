@@ -3,14 +3,14 @@ html {
     padding: 0;
 }
 body {
-    font-family: 'Handlee', cursive;
-    font-size: 13pt;
+    font-family: 'Tangerine', cursive;
+    font-size: 22pt;
     background-color: #efefef;
     padding: 10px;
     margin: 0;
 }
 h1 {
-    font-size: 15pt;
+    font-size: 32pt;
     color: #20bcd5;
     text-align: center;
     padding: 18px 0 18px 0;
@@ -53,7 +53,7 @@ p {
     text-align: center;
 }
 .quote {
-    font-size: 12pt;
+    font-size: 17pt;
     text-align: right;
     margin-top: 10px;
 }
