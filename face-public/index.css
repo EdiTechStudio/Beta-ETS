@@ -162,7 +162,7 @@ input, textarea {
 }
 .copyright {
     font-size: 12pt;
-    text-align: center;
+    text-align: right;
     padding-bottom: 10px;
     color: grey;
 }
