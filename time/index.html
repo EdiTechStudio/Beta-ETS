@@ -17,17 +17,6 @@
     />
 
     <title>IST Internet Time by ETS</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4 align-items-center">
-          Current internet time is: <br /><span id="time"></span>
-        </h1>
-        <h3>Accuracy of this clock <b>doesn't depend</b> on your device!</h3>
-      </div>
-    </div>
-
     <script>
       fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((response) => response.json())
@@ -46,7 +35,6 @@
                 ? (array[i] = "0" + array[i])
                 : (array[i] = array[i]);
             }
-
             document.getElementById("time").innerHTML =
               array[0] + ":" + array[1] + ":" + array[2] + " IST";
           }, 500);
@@ -54,6 +42,17 @@
         })
         .catch((err) => console.error(err));
     </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4 align-items-center">
+          Current internet time is: <br /><span id="time"></span>
+        </h1>
+        <h3>Accuracy of this clock <b>doesn't depend</b> on your device!</h3>
+      </div>
+    </div>
+
     <script>
       /*
       console.log("javascript is working");
