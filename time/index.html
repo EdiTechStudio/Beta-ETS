@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>IST Internet Time by ETS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4 align-items-center">
+          Current internet time is: <br /><span id="time"></span>
+        </h1>
+        <h3>Accuracy of this clock <b>doesn't depend</b> on your device!</h3>
+      </div>
+    </div>
+
+    <script>
+      fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
+        .then((response) => response.json())
+        .then((data) => {
+          date = data.datetime;
+          console.log(date);
+          let ms = Date.parse(date);
+          setInterval(() => {
+            ms = ms + 500;
+            a = ((ms / 3600000) % 24) + 5.5;
+            b = (a - parseInt(a)) * 60;
+            c = (b - parseInt(b)) * 60;
+            document.getElementById("time").innerHTML =
+              parseInt(a) + ":" + parseInt(b) + ":" + parseInt(c) + " IST";
+          }, 500);
+          // console.log(milliseconds);
+        })
+        .catch((err) => console.error(err));
+    </script>
+    <script>
+      /*
+      console.log("javascript is working");
+      const userAction = async () => {
+        const response = await fetch(
+          "https://worldtimeapi.org/api/timezone/Asia/Kolkata"
+        );
+        const myJson = await response.json(); //extract JSON from the http response
+        // do something with myJson
+        console.log(myJson);
+      };
+      */
+    </script>
+  </body>
+</html>
