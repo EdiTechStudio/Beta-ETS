@@ -38,11 +38,11 @@
       </div>
     </div>
     <script>
+      let deviceDate = new Date();
       fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((response) => response.json())
         .then((data) => {
           let date = data.datetime,
-            deviceDate = new Date(),
             ddms = Date.parse(deviceDate);
 
           console.log(date);
