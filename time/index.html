@@ -17,13 +17,44 @@
     />
 
     <title>IST Internet Time by ETS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h3>Current internet time is:</h3>
+        <br />
+        <h5 align="center">
+          <span style="border: 1px solid red; padding: 10px" id="time"></span>
+        </h5>
+        <br />
+        <hr class="my-4" />
+        <p>Accuracy of this clock <b>doesn't depend</b> on your device!</p>
+        <h6 align="center">
+          <span
+            style="border: 1px solid red; padding: 10px"
+            id="condition"
+          ></span>
+        </h6>
+      </div>
+    </div>
     <script>
       fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((response) => response.json())
         .then((data) => {
-          date = data.datetime;
+          let date = data.datetime,
+            deviceDate = new Date(),
+            ddms = Date.parse(deviceDate);
+
           console.log(date);
-          let ms = Date.parse(date);
+          let ms = Date.parse(date),
+            timeDiff = ms - ddms;
+          let condition = timeDiff > 0 ? "slow" : "fast";
+          document.getElementById("condition").innerHTML =
+            "Your device is is " +
+            condition +
+            " by " +
+            parseInt((timeDiff = timeDiff > 0 ? timeDiff : -1 * timeDiff)) +
+            " milliseconds.";
           setInterval(() => {
             ms = ms + 500;
             let a = ((ms / 3600000) % 24) + 5.5;
@@ -42,21 +73,6 @@
         })
         .catch((err) => console.error(err));
     </script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h3>Current internet time is:</h3>
-        <br>
-        <h5 align="center">
-          <span style="border: 1px solid red; padding: 10px" id="time"></span>
-        </h5>
-        <br>
-        <hr class="my-4" />
-        <p>Accuracy of this clock <b>doesn't depend</b> on your device!</p>
-      </div>
-    </div>
-
     <script>
       /*
       console.log("javascript is working");
