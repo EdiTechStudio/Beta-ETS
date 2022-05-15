@@ -37,11 +37,18 @@
           let ms = Date.parse(date);
           setInterval(() => {
             ms = ms + 500;
-            a = ((ms / 3600000) % 24) + 5.5;
-            b = (a - parseInt(a)) * 60;
-            c = (b - parseInt(b)) * 60;
+            let a = ((ms / 3600000) % 24) + 5.5;
+            let b = (a - parseInt(a)) * 60;
+            let c = (b - parseInt(b)) * 60;
+            array = [parseInt(a), parseInt(b), parseInt(c)];
+            for (var i = 0; i < array.length; i++) {
+              array[i] < 10
+                ? (array[i] = "0" + array[i])
+                : (array[i] = array[i]);
+            }
+
             document.getElementById("time").innerHTML =
-              parseInt(a) + ":" + parseInt(b) + ":" + parseInt(c) + " IST";
+              array[0] + ":" + array[1] + ":" + array[2] + " IST";
           }, 500);
           // console.log(milliseconds);
         })
