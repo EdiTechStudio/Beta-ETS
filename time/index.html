@@ -42,8 +42,8 @@
       fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((response) => response.json())
         .then((data) => {
-          let deviceDate = new Date(),
-            date = data.datetime,
+          let date = data.datetime,
+            deviceDate = new Date(),
             ddms = Date.parse(deviceDate);
 
           console.log(date);
@@ -51,7 +51,7 @@
             timeDiff = ms - ddms;
           let condition = timeDiff > 0 ? "slow" : "fast";
           document.getElementById("condition").innerHTML =
-            "Your device is is " +
+            "Your device is " +
             condition +
             " by " +
             parseInt((timeDiff = timeDiff > 0 ? timeDiff : -1 * timeDiff)) +
