@@ -59,7 +59,8 @@
             " milliseconds.";
           setInterval(() => {
             ms = ms + 500;
-            let a = ((ms / 3600000) % 24) + 5.5;
+            let a = ((ms + 19800000) / 3600000) % 24;
+            <!-- Accomodating GMT+5:30 without breaking the code, by adding 5:30 with MS, so that clock doesn't show wrong hours (more than 24) till 5:30am -->
             let b = (a - parseInt(a)) * 60;
             let c = (b - parseInt(b)) * 60;
             array = [parseInt(a), parseInt(b), parseInt(c)];
