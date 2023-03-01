@@ -40,7 +40,7 @@
     </div>
 
     <script>
-      await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
+      fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((response) => response.json())
         .then((data) => {
           let date = data.datetime,
