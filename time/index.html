@@ -46,12 +46,12 @@
           let date = data.datetime,
             deviceDate = new Date(),
             ddms = Date.parse(deviceDate);
-            cF = 390
+            cF = 400
             <!-- correction Factor, avg time required for all the calculation -->
 
           console.log(date);
           let ms = Date.parse(date),
-            timeDiff = ms - ddms - cF;
+            timeDiff = ms - (ddms + cF);
           let condition = timeDiff > 0 ? "slow" : "fast";
           document.getElementById("condition").innerHTML =
             "Your device is " +
