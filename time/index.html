@@ -45,7 +45,7 @@
       fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia%2FKolkata")
         .then((response) => response.json())
         .then((data) => {
-          let date = data.datetime,
+          let date = data.Number(datetime),
             deviceDate = new Date(),
             ddms = Date.parse(deviceDate);
             cF = 400
