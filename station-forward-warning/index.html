@@ -2,20 +2,32 @@
 <html>
   <head>
     <title>Temporary Link Forwarding Station - EdiTechStudio</title>
-    <meta http-equiv="refresh" content="10; URL=https://editechstudio.com/temp-link/">
+    <meta http-equiv="refresh" content="6; URL=https://editechstudio.com/temp-link/">
     <script>
-      // Fetch the refresh time from the meta tag
-      const metaRefresh = document.querySelector("meta[http-equiv='refresh']");
-      const refreshTime = metaRefresh.content.split(";")[0];
+      // Set the countdown time in seconds based on the meta refresh time
+      let countdownTime = 5;
 
-      // Update the <h1> tag text with the dynamic refresh time
+      // Function to update the countdown every second
+      function updateCountdown() {
+        document.getElementById("refreshMessage").innerText = 
+          `This page will auto-refresh in ${countdownTime} seconds...!`;
+        countdownTime--;
+
+        // Stop the interval once the countdown reaches 0
+        if (countdownTime < 0) {
+          clearInterval(countdownInterval);
+        }
+      }
+
+      // Start the countdown on page load
       window.onload = () => {
-        document.getElementById("refreshMessage").innerText = `This page will auto-refresh in ${refreshTime} seconds...!`;
+        updateCountdown(); // Initial display
+        countdownInterval = setInterval(updateCountdown, 1000); // Update every 1 second
       };
     </script>
   </head>
   <body>
-    <h1 id="refreshMessage" style="color:red; text-align:center; font-size:55px; margin-top:100px;"> This page is not working as intended! </h1>
+    <h1 id="refreshMessage" style="color:red; text-align:center; font-size:55px; margin-top:100px;"> This page will auto-refresh in 5 seconds...! </h1>
     <h2 align="center">
       <img src="https://admission.iist.ac.in/ug/template/default/images/new1.gif"> Happy Forwarding!
       <img src="https://admission.iist.ac.in/ug/template/default/images/new1.gif">
