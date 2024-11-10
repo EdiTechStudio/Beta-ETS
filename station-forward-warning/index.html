@@ -5,7 +5,9 @@
     <meta http-equiv="refresh" content="10; URL=https://editechstudio.com/temp-link/">
     <script>
       // Set the countdown time in seconds based on the meta refresh time
-      let countdownTime = 5;
+      const metaRefresh = document.querySelector("meta[http-equiv='refresh']");
+      const refreshTime = metaRefresh.content.split(";")[0];
+      let countdownTime = refreshTime;
 
       // Function to update the countdown every second
       function updateCountdown() {
