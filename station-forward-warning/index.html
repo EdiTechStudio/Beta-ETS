@@ -9,10 +9,22 @@
       const refreshTime = metaRefresh.content.split(";")[0];
       let countdownTime = refreshTime;
 
+      // Function to generate a random color
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
       // Function to update the countdown every second
       function updateCountdown() {
-        document.getElementById("refreshMessage").innerText = 
-          `This page will auto-refresh in ${countdownTime} seconds...!`;
+        const refreshMessage = document.getElementById("refreshMessage");
+        refreshMessage.innerText = `This page will auto-refresh in ${countdownTime} seconds...!`;
+        refreshMessage.style.color = getRandomColor();  // Assign random color
+
         countdownTime--;
 
         // Stop the interval once the countdown reaches 0
@@ -29,7 +41,7 @@
     </script>
   </head>
   <body>
-    <h1 id="refreshMessage" style="color:red; text-align:center; font-size:55px; margin-top:100px;"> </h1>
+    <h1 id="refreshMessage" style="text-align:center; font-size:55px; margin-top:100px;"> </h1>
     <h2 align="center">
       <img src="https://admission.iist.ac.in/ug/template/default/images/new1.gif"> Happy Forwarding!
       <img src="https://admission.iist.ac.in/ug/template/default/images/new1.gif">
