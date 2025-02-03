@@ -166,3 +166,35 @@ input, textarea {
     padding-bottom: 10px;
     color: grey;
 }
+
+/* Print Styles */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact; /* Ensures background colors and images are printed */
+        print-color-adjust: exact;
+        background: white;
+        color: black;
+    }
+
+    .section {
+        page-break-inside: avoid; /* Prevents breaking sections across pages */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Hide elements that shouldn't appear in print */
+    button, 
+    #contacts, 
+    .copyright {
+        display: none;
+    }
+
+    /* Remove default browser print margins */
+    @page {
+        size: auto; 
+        margin: 0;
+    }
+}
